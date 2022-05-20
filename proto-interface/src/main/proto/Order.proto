@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package net.devh.boot.grpc.example;
+
+option java_multiple_files = true;
+option java_package = "order";
+option java_outer_classname = "OrderProto";
+
+service OrderService {
+  rpc Order (OrderRequest) returns (OrderReply) {
+  }
+}
+
+message OrderRequest {
+  string name = 1;
+}
+
+message OrderReply {
+  int64 id = 1;
+  string name = 2;
+  string orderStatus = 3;
+  string deliveryStatus = 4;
+}
