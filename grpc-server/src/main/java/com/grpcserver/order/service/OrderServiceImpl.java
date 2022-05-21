@@ -19,6 +19,14 @@ public class OrderServiceImpl extends OrderServiceGrpc.OrderServiceImplBase {
 
     int index = INITIAL;
 
+    /**
+     * Order Service - Server Side <br>
+     * test : <br>
+     * 1) $brew install grpcurl <br>
+     * 2) $grpcurl --plaintext -d '{"name":"xxxx"}' localhost:9090 net.devh.boot.grpc.example.OrderService/Order <br>
+     * @param orderRequest     proto-interface 모듈에 정의된 Order.proto 의 Request
+     * @param responseObserver Observer
+     */
     @Override
     public void order(OrderRequest orderRequest, StreamObserver<OrderReply> responseObserver) {
 
