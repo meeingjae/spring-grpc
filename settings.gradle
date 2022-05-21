@@ -1,3 +1,4 @@
 rootProject.name = 'spring-grpc'
 
 include 'proto-interface'
+include 'grpc-server'
