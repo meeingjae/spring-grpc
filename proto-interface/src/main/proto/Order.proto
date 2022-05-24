@@ -7,7 +7,7 @@ option java_package = "order";
 option java_outer_classname = "OrderProto";
 
 service OrderService {
-  rpc Order (OrderRequest) returns (OrderReply) {
+  rpc order (OrderRequest) returns (OrderReply) {
   }
 }
 

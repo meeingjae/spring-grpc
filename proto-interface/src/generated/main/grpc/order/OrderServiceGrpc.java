@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.46.0)",
+    value = "by gRPC proto compiler (version 1.43.1)",
     comments = "Source: Order.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OrderServiceGrpc {
@@ -19,7 +19,7 @@ public final class OrderServiceGrpc {
       order.OrderReply> getOrderMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Order",
+      fullMethodName = SERVICE_NAME + '/' + "order",
       requestType = order.OrderRequest.class,
       responseType = order.OrderReply.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -32,13 +32,13 @@ public final class OrderServiceGrpc {
           OrderServiceGrpc.getOrderMethod = getOrderMethod =
               io.grpc.MethodDescriptor.<order.OrderRequest, order.OrderReply>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Order"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "order"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   order.OrderRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   order.OrderReply.getDefaultInstance()))
-              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("Order"))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("order"))
               .build();
         }
       }
