@@ -37,7 +37,7 @@ public final class OrderProto {
       "e\"\034\n\014OrderRequest\022\014\n\004name\030\001 \001(\t\"S\n\nOrder" +
       "Reply\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\023\n\013order" +
       "Status\030\003 \001(\t\022\026\n\016deliveryStatus\030\004 \001(\t2k\n\014" +
-      "OrderService\022[\n\005Order\022(.net.devh.boot.gr" +
+      "OrderService\022[\n\005order\022(.net.devh.boot.gr" +
       "pc.example.OrderRequest\032&.net.devh.boot." +
       "grpc.example.OrderReply\"\000B\025\n\005orderB\nOrde" +
       "rProtoP\001b\006proto3"
