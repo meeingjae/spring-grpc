@@ -1,30 +1,27 @@
 package com.grpcclient.order.service;
 
-import io.grpc.ManagedChannelBuilder;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import order.OrderReply;
 import order.OrderRequest;
-import order.OrderServiceGrpc;
 import order.OrderServiceGrpc.OrderServiceBlockingStub;
 import org.springframework.stereotype.Service;
 
-@AllArgsConstructor
+@Slf4j
 @Service
+@AllArgsConstructor
 public class OrderService {
 
-    private final static String HOST = "localhost";
-    private final static int    PORT = 9091;
-
-    private final OrderServiceBlockingStub orderStub = OrderServiceGrpc.newBlockingStub(
-            ManagedChannelBuilder.forAddress(HOST, PORT)
-                    .usePlaintext()
-                    .build());
+    private final OrderServiceBlockingStub orderStub;
 
     public OrderReply order(String name) {
 
+        log.info("request name: {}", name);
         OrderRequest request = OrderRequest.newBuilder()
                 .setName(name)
                 .build();
-        return orderStub.order(request);
+        OrderReply reply = orderStub.order(request);
+        log.info("request success. response: {}", reply);
+        return reply;
     }
 }
