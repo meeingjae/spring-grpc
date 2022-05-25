@@ -7,6 +7,7 @@ import net.devh.boot.grpc.client.inject.GrpcClientBean;
 import order.OrderServiceGrpc;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.protobuf.ProtobufHttpMessageConverter;
 
 @Configuration
 @GrpcClientBean(
@@ -26,5 +27,11 @@ public class OrderServiceConfiguration {
                 ManagedChannelBuilder.forAddress(HOST, PORT)
                         .usePlaintext()
                         .build()));
+    }
+
+    @Bean
+    ProtobufHttpMessageConverter protobufHttpMessageConverter() {
+
+        return new ProtobufHttpMessageConverter();
     }
 }
